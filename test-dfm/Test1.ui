@@ -1,0 +1,4238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form1</class>
+ <widget class="QWidget" name="Form1">
+  <property name="geometry">
+   <rect>
+    <x>516</x>
+    <y>163</y>
+    <width>1114</width>
+    <height>672</height>
+   </rect>
+  </property>
+  <property name="toolTip">
+   <string></string>
+  </property>
+  <property name="windowTitle">
+   <string>TestForm</string>
+  </property>
+  <widget class="QTabWidget" name="PageControl1">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1098</width>
+     <height>614</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>5</number>
+   </property>
+   <property name="tabPosition">
+    <enum>QTabWidget::North</enum>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <widget class="QWidget" name="TabSheet1">
+    <attribute name="title">
+     <string>Tabs</string>
+    </attribute>
+    <property name="toolTip">
+     <string></string>
+    </property>
+    <widget class="QLabel" name="Label1">
+     <property name="geometry">
+      <rect>
+       <x>309</x>
+       <y>24</y>
+       <width>71</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TTabControl</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label2">
+     <property name="geometry">
+      <rect>
+       <x>637</x>
+       <y>24</y>
+       <width>78</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TPageControl</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label3">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>106</y>
+       <width>40</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Normal</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label4">
+     <property name="geometry">
+      <rect>
+       <x>48</x>
+       <y>240</y>
+       <width>31</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Links</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label5">
+     <property name="geometry">
+      <rect>
+       <x>48</x>
+       <y>368</y>
+       <width>41</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Rechts</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label6">
+     <property name="geometry">
+      <rect>
+       <x>48</x>
+       <y>496</y>
+       <width>35</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Unten</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QTabWidget" name="TabControl1">
+     <property name="geometry">
+      <rect>
+       <x>272</x>
+       <y>56</y>
+       <width>217</width>
+       <height>113</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <property name="tabPosition">
+      <enum>QTabWidget::West</enum>
+     </property>
+     <widget class="QWidget" name="tab_CFRVX00000">
+      <attribute name="title">
+       <string>Tab 1</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_XNTFX00001">
+      <attribute name="title">
+       <string>Tab 2</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_SMGZC00002">
+      <attribute name="title">
+       <string>Tab 3</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_YUZXA00003">
+      <attribute name="title">
+       <string>...</string>
+      </attribute>
+     </widget>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QTabWidget" name="PageControl2">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>48</y>
+       <width>265</width>
+       <height>129</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="tabPosition">
+      <enum>QTabWidget::North</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <widget class="QWidget" name="TabSheet3">
+      <attribute name="title">
+       <string>TabSheet3</string>
+      </attribute>
+      <property name="toolTip">
+       <string>Sheet 3</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="TabSheet4">
+      <attribute name="title">
+       <string>TabSheet4</string>
+      </attribute>
+      <property name="toolTip">
+       <string>Sheet 4</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QTabWidget" name="TabControl2">
+     <property name="geometry">
+      <rect>
+       <x>272</x>
+       <y>190</y>
+       <width>217</width>
+       <height>113</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <property name="tabPosition">
+      <enum>QTabWidget::South</enum>
+     </property>
+     <widget class="QWidget" name="tab_JPYJU00004">
+      <attribute name="title">
+       <string>Tab 1</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_QKJSI00005">
+      <attribute name="title">
+       <string>Tab 2</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_UUPNR00006">
+      <attribute name="title">
+       <string>Tab 3</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_OKGJP00007">
+      <attribute name="title">
+       <string>...</string>
+      </attribute>
+     </widget>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QTabWidget" name="PageControl3">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>190</y>
+       <width>265</width>
+       <height>113</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="tabPosition">
+      <enum>QTabWidget::South</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <widget class="QWidget" name="TabSheet5">
+      <attribute name="title">
+       <string>TabSheet3</string>
+      </attribute>
+      <property name="toolTip">
+       <string></string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="TabSheet6">
+      <attribute name="title">
+       <string>TabSheet4</string>
+      </attribute>
+      <property name="toolTip">
+       <string></string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QTabWidget" name="TabControl3">
+     <property name="geometry">
+      <rect>
+       <x>272</x>
+       <y>318</y>
+       <width>217</width>
+       <height>113</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <property name="tabPosition">
+      <enum>QTabWidget::East</enum>
+     </property>
+     <widget class="QWidget" name="tab_DBBMA00008">
+      <attribute name="title">
+       <string>Tab 1</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_GMWFJ00009">
+      <attribute name="title">
+       <string>Tab 2</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_WRAWA00010">
+      <attribute name="title">
+       <string>Tab 3</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_UMNFG00011">
+      <attribute name="title">
+       <string>...</string>
+      </attribute>
+     </widget>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QTabWidget" name="PageControl4">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>318</y>
+       <width>265</width>
+       <height>113</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <property name="tabPosition">
+      <enum>QTabWidget::East</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <widget class="QWidget" name="TabSheet7">
+      <attribute name="title">
+       <string>TabSheet3</string>
+      </attribute>
+      <property name="toolTip">
+       <string></string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="TabSheet8">
+      <attribute name="title">
+       <string>TabSheet4</string>
+      </attribute>
+      <property name="toolTip">
+       <string></string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QTabWidget" name="TabControl4">
+     <property name="geometry">
+      <rect>
+       <x>272</x>
+       <y>446</y>
+       <width>217</width>
+       <height>113</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <property name="tabPosition">
+      <enum>QTabWidget::South</enum>
+     </property>
+     <widget class="QWidget" name="tab_XZAOO00012">
+      <attribute name="title">
+       <string>Tab 1</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_RCYYN00013">
+      <attribute name="title">
+       <string>Tab 2</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_ODORR00014">
+      <attribute name="title">
+       <string>Tab 3</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="tab_QZDOH00015">
+      <attribute name="title">
+       <string>...</string>
+      </attribute>
+     </widget>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QTabWidget" name="PageControl5">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>446</y>
+       <width>265</width>
+       <height>113</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <property name="tabPosition">
+      <enum>QTabWidget::South</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <widget class="QWidget" name="TabSheet9">
+      <attribute name="title">
+       <string>TabSheet3</string>
+      </attribute>
+      <property name="toolTip">
+       <string></string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="TabSheet10">
+      <attribute name="title">
+       <string>TabSheet4</string>
+      </attribute>
+      <property name="toolTip">
+       <string></string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="TabSheet2">
+    <attribute name="title">
+     <string>Bevels</string>
+    </attribute>
+    <property name="toolTip">
+     <string></string>
+    </property>
+    <widget class="QFrame" name="Bevel1">
+     <property name="frameShape">
+      <enum>QFrame::HLine</enum>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>232</x>
+       <y>63</y>
+       <width>50</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label7">
+     <property name="geometry">
+      <rect>
+       <x>56</x>
+       <y>82</y>
+       <width>77</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>bsBottomLine</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Bevel2">
+     <property name="frameShape">
+      <enum>QFrame::HLine</enum>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>232</x>
+       <y>429</y>
+       <width>50</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label8">
+     <property name="geometry">
+      <rect>
+       <x>56</x>
+       <y>498</y>
+       <width>60</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>bsTopLine</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Bevel3">
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>232</x>
+       <y>202</y>
+       <width>50</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label9">
+     <property name="geometry">
+      <rect>
+       <x>56</x>
+       <y>221</y>
+       <width>48</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>bsFrame</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Bevel4">
+     <property name="frameShape">
+      <enum>QFrame::VLine</enum>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>182</x>
+       <y>271</y>
+       <width>100</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label10">
+     <property name="geometry">
+      <rect>
+       <x>56</x>
+       <y>290</y>
+       <width>60</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>bsLeftLine</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Bevel5">
+     <property name="frameShape">
+      <enum>QFrame::VLine</enum>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>232</x>
+       <y>341</y>
+       <width>100</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label11">
+     <property name="geometry">
+      <rect>
+       <x>56</x>
+       <y>360</y>
+       <width>68</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>bsRightLine</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Bevel6">
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>232</x>
+       <y>410</y>
+       <width>50</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label12">
+     <property name="geometry">
+      <rect>
+       <x>56</x>
+       <y>429</y>
+       <width>54</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>bsSpacer</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Bevel7">
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>232</x>
+       <y>132</y>
+       <width>50</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label13">
+     <property name="geometry">
+      <rect>
+       <x>56</x>
+       <y>151</y>
+       <width>35</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>bsBox</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Bevel8">
+     <property name="frameShape">
+      <enum>QFrame::HLine</enum>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>63</y>
+       <width>50</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Bevel9">
+     <property name="frameShape">
+      <enum>QFrame::HLine</enum>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>429</y>
+       <width>50</width>
+       <height>100</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Bevel10">
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>202</y>
+       <width>50</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Bevel11">
+     <property name="frameShape">
+      <enum>QFrame::VLine</enum>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>271</y>
+       <width>100</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Bevel12">
+     <property name="frameShape">
+      <enum>QFrame::VLine</enum>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>341</y>
+       <width>100</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Bevel13">
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>410</y>
+       <width>50</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Bevel14">
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>132</y>
+       <width>50</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label14">
+     <property name="geometry">
+      <rect>
+       <x>224</x>
+       <y>18</y>
+       <width>62</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>bsLowered</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label15">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>18</y>
+       <width>53</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>bsRaised</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="TabSheet11">
+    <attribute name="title">
+     <string>Buttons</string>
+    </attribute>
+    <property name="toolTip">
+     <string></string>
+    </property>
+    <widget class="QPushButton" name="SpeedButton1">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>120</y>
+       <width>73</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Speedbutton</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SpeedButton2">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>120</y>
+       <width>137</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Speedbutton flat</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label34">
+     <property name="geometry">
+      <rect>
+       <x>504</x>
+       <y>48</y>
+       <width>171</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TCSpinButtons wird nicht unterstützt</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string></string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Button1">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>56</y>
+       <width>75</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TButton</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="BitBtn1">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>88</y>
+       <width>75</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TBitBtn1</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QScrollBar" name="ScrollBar1">
+     <property name="geometry">
+      <rect>
+       <x>568</x>
+       <y>264</y>
+       <width>121</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="minimum">
+      <number>12</number>
+     </property>
+     <property name="maximum">
+      <number>203</number>
+     </property>
+     <property name="value">
+      <number>54</number>
+     </property>
+     <property name="singleStep">
+      <number>1</number>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QScrollBar" name="ScrollBar2">
+     <property name="geometry">
+      <rect>
+       <x>712</x>
+       <y>208</y>
+       <width>17</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="minimum">
+      <number>12</number>
+     </property>
+     <property name="maximum">
+      <number>203</number>
+     </property>
+     <property name="value">
+      <number>54</number>
+     </property>
+     <property name="singleStep">
+      <number>1</number>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="TabSheet12">
+    <attribute name="title">
+     <string>Labels</string>
+    </attribute>
+    <property name="toolTip">
+     <string></string>
+    </property>
+    <widget class="QLabel" name="Label16">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>88</y>
+       <width>81</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Text</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label17">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>88</y>
+       <width>31</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Links</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label18">
+     <property name="geometry">
+      <rect>
+       <x>42</x>
+       <y>140</y>
+       <width>29</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Mitte</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label19">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>192</y>
+       <width>41</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Rechts</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label20">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>24</y>
+       <width>40</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TLabel</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label21">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>140</y>
+       <width>81</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Text</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label22">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>192</y>
+       <width>81</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Text</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label23">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>24</y>
+       <width>67</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TStaticText</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label24">
+     <property name="geometry">
+      <rect>
+       <x>48</x>
+       <y>264</y>
+       <width>36</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Single</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label25">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>316</y>
+       <width>31</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>None</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label26">
+     <property name="geometry">
+      <rect>
+       <x>38</x>
+       <y>368</y>
+       <width>44</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sunken</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="StaticText1">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>262</y>
+       <width>113</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>StaticText1</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="StaticText2">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>314</y>
+       <width>113</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>StaticText1</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="StaticText3">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>366</y>
+       <width>113</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>StaticText1</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="StaticText4">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>78</y>
+       <width>113</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>StaticText1</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="StaticText5">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>130</y>
+       <width>113</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>StaticText1</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="StaticText6">
+     <property name="geometry">
+      <rect>
+       <x>600</x>
+       <y>182</y>
+       <width>113</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>StaticText1</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="TabSheet13">
+    <attribute name="title">
+     <string>Inputs</string>
+    </attribute>
+    <property name="toolTip">
+     <string></string>
+    </property>
+    <widget class="QLineEdit" name="MaskEdit1">
+     <property name="geometry">
+      <rect>
+       <x>104</x>
+       <y>56</y>
+       <width>225</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TMaskEdit</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="Edit1">
+     <property name="geometry">
+      <rect>
+       <x>104</x>
+       <y>96</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>TEdit</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="Memo1">
+     <property name="geometry">
+      <rect>
+       <x>104</x>
+       <y>136</y>
+       <width>185</width>
+       <height>89</height>
+      </rect>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="plainText">
+      <string>Schönen guten Morgen,
+
+es kann ein kleines Männchen nicht 
+immer
+im Walde stehen, um es dort zu 
+besehen.
+Darum wollen wir es beflehen, uns 
+doch auch einmal an zu sehen.</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="CSpinEdit1">
+     <property name="geometry">
+      <rect>
+       <x>104</x>
+       <y>232</y>
+       <width>121</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="minimum">
+      <number>-11</number>
+     </property>
+     <property name="maximum">
+      <number>201</number>
+     </property>
+     <property name="singleStep">
+      <number>3</number>
+     </property>
+     <property name="value">
+      <number>5</number>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="TabSheet14">
+    <attribute name="title">
+     <string>Boxes</string>
+    </attribute>
+    <property name="toolTip">
+     <string></string>
+    </property>
+    <widget class="QLabel" name="Label27">
+     <property name="geometry">
+      <rect>
+       <x>88</x>
+       <y>346</y>
+       <width>104</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>BevelInner: Lower</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label28">
+     <property name="geometry">
+      <rect>
+       <x>92</x>
+       <y>418</y>
+       <width>100</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>BevelInner: None</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label29">
+     <property name="geometry">
+      <rect>
+       <x>34</x>
+       <y>490</y>
+       <width>158</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>BevelInner: Raised/Spaced</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label30">
+     <property name="geometry">
+      <rect>
+       <x>291</x>
+       <y>282</y>
+       <width>106</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>BevelOuter: Lower</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label31">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>282</y>
+       <width>102</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>BevelOuter: None</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label32">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>282</y>
+       <width>160</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>BevelOuter: Raised/Spaced</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="GroupBox1">
+     <property name="geometry">
+      <rect>
+       <x>328</x>
+       <y>56</y>
+       <width>241</width>
+       <height>185</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>TGroupBox</string>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <widget class="QCheckBox" name="CheckBox1">
+      <property name="geometry">
+       <rect>
+        <x>24</x>
+        <y>24</y>
+        <width>97</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CheckBox1</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>Tooltip</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="CheckBox2">
+      <property name="geometry">
+       <rect>
+        <x>24</x>
+        <y>64</y>
+        <width>97</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CheckBox2</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+      <property name="toolTip">
+       <string>Tooltip</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="CheckBox3">
+      <property name="geometry">
+       <rect>
+        <x>24</x>
+        <y>104</y>
+        <width>97</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CheckBox3</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+      <property name="toolTip">
+       <string>Tooltip</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="Panel2">
+     <property name="geometry">
+      <rect>
+       <x>288</x>
+       <y>328</y>
+       <width>113</width>
+       <height>49</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Panel1</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <enum>Qt::AlignCenter</enum>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>88</red>
+           <green>32</green>
+           <blue>96</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>88</red>
+           <green>32</green>
+           <blue>96</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>88</red>
+           <green>32</green>
+           <blue>96</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::WinPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="GroupBox2">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>56</y>
+       <width>241</width>
+       <height>185</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>TGroupBox</string>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <widget class="QRadioButton" name="RadioButton1">
+      <property name="geometry">
+       <rect>
+        <x>16</x>
+        <y>88</y>
+        <width>113</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>RadioButton1</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="toolTip">
+       <string>Tooltip</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="RadioButton2">
+      <property name="geometry">
+       <rect>
+        <x>16</x>
+        <y>56</y>
+        <width>113</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>RadioButton2</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="toolTip">
+       <string>Tooltip</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="RadioButton3">
+      <property name="geometry">
+       <rect>
+        <x>16</x>
+        <y>24</y>
+        <width>113</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>RadioButton3</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="toolTip">
+       <string>Tooltip</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="Panel1">
+     <property name="geometry">
+      <rect>
+       <x>475</x>
+       <y>328</y>
+       <width>113</width>
+       <height>49</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Panel1</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <enum>Qt::AlignCenter</enum>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Panel3">
+     <property name="geometry">
+      <rect>
+       <x>664</x>
+       <y>328</y>
+       <width>113</width>
+       <height>49</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Panel1</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <enum>Qt::AlignCenter</enum>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Panel4">
+     <property name="geometry">
+      <rect>
+       <x>288</x>
+       <y>400</y>
+       <width>113</width>
+       <height>49</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Panel1</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <enum>Qt::AlignCenter</enum>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Panel5">
+     <property name="geometry">
+      <rect>
+       <x>475</x>
+       <y>400</y>
+       <width>113</width>
+       <height>49</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Panel1</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <enum>Qt::AlignCenter</enum>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Panel6">
+     <property name="geometry">
+      <rect>
+       <x>664</x>
+       <y>400</y>
+       <width>113</width>
+       <height>49</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Panel1</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <enum>Qt::AlignCenter</enum>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Panel7">
+     <property name="geometry">
+      <rect>
+       <x>288</x>
+       <y>472</y>
+       <width>113</width>
+       <height>49</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Panel1</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <enum>Qt::AlignCenter</enum>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>128</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Panel8">
+     <property name="geometry">
+      <rect>
+       <x>475</x>
+       <y>472</y>
+       <width>113</width>
+       <height>49</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Panel1</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <enum>Qt::AlignCenter</enum>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Panel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Panel9">
+     <property name="geometry">
+      <rect>
+       <x>664</x>
+       <y>472</y>
+       <width>113</width>
+       <height>49</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Panel1</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <enum>Qt::AlignCenter</enum>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::WinPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QScrollArea" name="ScrollBox1">
+     <property name="geometry">
+      <rect>
+       <x>896</x>
+       <y>176</y>
+       <width>185</width>
+       <height>137</height>
+      </rect>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <widget class="QWidget" name="ScrollBox1Contents">
+      <property name="geometry">
+       <rect>
+        <x>896</x>
+        <y>176</y>
+        <width>185</width>
+        <height>137</height>
+       </rect>
+      </property>
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="toolTip">
+       <string>Tooltip</string>
+      </property>
+      <widget class="QPlainTextEdit" name="Memo2">
+       <property name="geometry">
+        <rect>
+         <x>-37</x>
+         <y>-16</y>
+         <width>289</width>
+         <height>209</height>
+        </rect>
+       </property>
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="toolTip">
+        <string>Tooltip</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Panel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="plainText">
+        <string>Hier steht ein längerer Text, der am besten in einem schön 
+großen Fenster betrastet werden sollte.Hier steht ein 
+längerer Text, der am besten in einem schön großen Fenster 
+betrastet werden sollte.Hier steht ein längerer Text, der am 
+besten in einem schön großen Fenster betrastet werden 
+sollte.Hier steht ein längerer Text, der am besten in einem 
+schön großen Fenster betrastet werden sollte.Hier steht ein 
+längerer Text, der am besten in einem schön großen Fenster 
+betrastet werden sollte.Hier steht ein längerer Text, der am 
+besten in einem schön großen Fenster betrastet werden 
+sollte.Hier steht ein längerer Text, der am besten in einem 
+schön großen Fenster betrastet werden sollte.Hier steht ein 
+längerer Text, der am besten in einem schön großen Fenster 
+betrastet werden sollte.Hier steht ein längerer Text, der am 
+besten in einem schön großen Fenster betrastet werden 
+sollte.Hier steht ein längerer Text, der am besten in einem 
+schön großen Fenster betrastet werden sollte.</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QTreeWidget" name="TreeView1">
+     <property name="geometry">
+      <rect>
+       <x>896</x>
+       <y>352</y>
+       <width>185</width>
+       <height>137</height>
+      </rect>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QScrollArea" name="ScrollBox2">
+     <property name="geometry">
+      <rect>
+       <x>896</x>
+       <y>32</y>
+       <width>185</width>
+       <height>137</height>
+      </rect>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <widget class="QWidget" name="ScrollBox2Contents">
+      <property name="geometry">
+       <rect>
+        <x>896</x>
+        <y>32</y>
+        <width>185</width>
+        <height>137</height>
+       </rect>
+      </property>
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="toolTip">
+       <string>Tooltip</string>
+      </property>
+      <widget class="QGraphicsView" name="Image2">
+       <property name="geometry">
+        <rect>
+         <x>96</x>
+         <y>48</y>
+         <width>105</width>
+         <height>105</height>
+        </rect>
+       </property>
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="toolTip">
+        <string></string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="TabSheet15">
+    <attribute name="title">
+     <string>Image</string>
+    </attribute>
+    <property name="toolTip">
+     <string></string>
+    </property>
+    <widget class="QGraphicsView" name="Image1">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>136</y>
+       <width>281</width>
+       <height>225</height>
+      </rect>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Label33">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>98</y>
+       <width>216</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>The image has to be loaded manually!</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>0</red>
+           <green>0</green>
+           <blue>0</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="TabSheet16">
+    <attribute name="title">
+     <string>Statusbar</string>
+    </attribute>
+    <property name="toolTip">
+     <string></string>
+    </property>
+    <widget class="QStatusBar" name="StatusBar1">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>567</y>
+       <width>1090</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="TabSheet18">
+    <attribute name="title">
+     <string>Lists</string>
+    </attribute>
+    <property name="toolTip">
+     <string></string>
+    </property>
+    <widget class="QListWidget" name="CheckListBox1">
+     <property name="geometry">
+      <rect>
+       <x>72</x>
+       <y>40</y>
+       <width>121</width>
+       <height>97</height>
+      </rect>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>ToolTip</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>Item 1</string>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Item 2</string>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Item 3</string>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Item 4</string>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Item 5</string>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="ComboBox1">
+     <property name="geometry">
+      <rect>
+       <x>256</x>
+       <y>64</y>
+       <width>145</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>ToolTip</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>Item 1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Item 2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Item 3</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Item 4</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QListWidget" name="ListBox1">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>144</y>
+       <width>121</width>
+       <height>97</height>
+      </rect>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string></string>
+     </property>
+     <item>
+      <property name="text">
+       <string>first item</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>second item</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>third item</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="TabSheet17">
+    <attribute name="title">
+     <string>Progress</string>
+    </attribute>
+    <property name="toolTip">
+     <string></string>
+    </property>
+    <widget class="QProgressBar" name="CGauge1">
+     <property name="geometry">
+      <rect>
+       <x>176</x>
+       <y>288</y>
+       <width>153</width>
+       <height>65</height>
+      </rect>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="value">
+      <number>79</number>
+     </property>
+     <property name="textVisible">
+      <bool>true</bool>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="minimum">
+      <number>2</number>
+     </property>
+     <property name="maximum">
+      <number>201</number>
+     </property>
+     <property name="alignment">
+      <enum>Qt::AlignCenter</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="CGauge2">
+     <property name="geometry">
+      <rect>
+       <x>656</x>
+       <y>32</y>
+       <width>97</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="value">
+      <number>81</number>
+     </property>
+     <property name="textVisible">
+      <bool>true</bool>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="minimum">
+      <number>2</number>
+     </property>
+     <property name="maximum">
+      <number>201</number>
+     </property>
+     <property name="alignment">
+      <enum>Qt::AlignCenter</enum>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="TrackBar1">
+     <property name="geometry">
+      <rect>
+       <x>176</x>
+       <y>112</y>
+       <width>150</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="minimum">
+      <number>55</number>
+     </property>
+     <property name="maximum">
+      <number>201</number>
+     </property>
+     <property name="value">
+      <number>70</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="tickPosition">
+      <enum>QSlider::TicksBelow</enum>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="ProgressBar1">
+     <property name="geometry">
+      <rect>
+       <x>176</x>
+       <y>200</y>
+       <width>150</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="value">
+      <number>15</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="minimum">
+      <number>-10</number>
+     </property>
+     <property name="maximum">
+      <number>202</number>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+    <widget class="QSlider" name="TrackBar2">
+     <property name="geometry">
+      <rect>
+       <x>456</x>
+       <y>24</y>
+       <width>49</width>
+       <height>169</height>
+      </rect>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="minimum">
+      <number>55</number>
+     </property>
+     <property name="maximum">
+      <number>201</number>
+     </property>
+     <property name="value">
+      <number>70</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="tickPosition">
+      <enum>QSlider::TicksAbove</enum>
+     </property>
+    </widget>
+    <widget class="QProgressBar" name="ProgressBar2">
+     <property name="geometry">
+      <rect>
+       <x>544</x>
+       <y>32</y>
+       <width>81</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="value">
+      <number>15</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="minimum">
+      <number>-10</number>
+     </property>
+     <property name="maximum">
+      <number>202</number>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="MainMenu1">
+   <property name="geometry">
+    <rect>
+     <x>12</x>
+     <y>24</y>
+     <width>1114</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
+   <widget class="QMenu" name="E11">
+    <property name="title">
+     <string>E1</string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string></string>
+    </property>
+    <addaction name="E1E11"/>
+    <widget class="QMenu" name="E1E21">
+     <property name="title">
+      <string>E1 E2</string>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string></string>
+     </property>
+     <addaction name="E1E2E11"/>
+     <addaction name="E1E2E21"/>
+     <widget class="QMenu" name="E1E2E31">
+      <property name="title">
+       <string>E1 E2 E3</string>
+      </property>
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="toolTip">
+       <string></string>
+      </property>
+      <addaction name="E1E2E3E11"/>
+     </widget>
+     <addaction name="E1E2E31"/>
+    </widget>
+    <addaction name="E1E21"/>
+   </widget>
+   <addaction name="E11"/>
+   <widget class="QMenu" name="E21">
+    <property name="title">
+     <string>E2</string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string></string>
+    </property>
+    <addaction name="E2E11"/>
+    <addaction name="E2E21"/>
+    <addaction name="E2E31"/>
+   </widget>
+   <addaction name="E21"/>
+   <widget class="QMenu" name="E31">
+    <property name="title">
+     <string>E3</string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string></string>
+    </property>
+    <addaction name="E3E11"/>
+    <addaction name="separator"/>
+    <addaction name="E3E21"/>
+    <addaction name="E3E31"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="E3E41"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="E31"/>
+   <widget class="QMenu" name="E41">
+    <property name="title">
+     <string>E4</string>
+    </property>
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="toolTip">
+     <string></string>
+    </property>
+   </widget>
+   <addaction name="E41"/>
+  </widget>
+  <action name="E1E11">
+   <property name="text">
+    <string>E1 E1</string>
+   </property>
+  </action>
+  <action name="E1E2E11">
+   <property name="text">
+    <string>E1 E2 E1</string>
+   </property>
+  </action>
+  <action name="E1E2E21">
+   <property name="text">
+    <string>E1 E2 E2</string>
+   </property>
+  </action>
+  <action name="E1E2E3E11">
+   <property name="text">
+    <string>E1 E2 E3 E1</string>
+   </property>
+  </action>
+  <action name="E2E11">
+   <property name="text">
+    <string>E2 E1</string>
+   </property>
+  </action>
+  <action name="E2E21">
+   <property name="text">
+    <string>E2 E2</string>
+   </property>
+  </action>
+  <action name="E2E31">
+   <property name="text">
+    <string>E2 E3</string>
+   </property>
+  </action>
+  <action name="E3E11">
+   <property name="text">
+    <string>E3 E1</string>
+   </property>
+  </action>
+  <action name="E3E21">
+   <property name="text">
+    <string>E3 E2</string>
+   </property>
+  </action>
+  <action name="E3E31">
+   <property name="text">
+    <string>E3 E3</string>
+   </property>
+  </action>
+  <action name="E3E41">
+   <property name="text">
+    <string>E3 E4</string>
+   </property>
+  </action>
+  <addaction name="P11"/>
+  <action name="P11">
+   <property name="text">
+    <string>P1</string>
+   </property>
+  </action>
+  <addaction name="P21"/>
+  <action name="P21">
+   <property name="text">
+    <string>P2</string>
+   </property>
+  </action>
+  <addaction name="P31"/>
+  <action name="P31">
+   <property name="text">
+    <string>P3</string>
+   </property>
+  </action>
+  <addaction name="P41"/>
+  <action name="P41">
+   <property name="text">
+    <string>P4</string>
+   </property>
+  </action>
+  <addaction name="P51"/>
+  <action name="P51">
+   <property name="text">
+    <string>P5</string>
+   </property>
+  </action>
+  <addaction name="separator"/>
+  <addaction name="P61"/>
+  <action name="P61">
+   <property name="text">
+    <string>P6</string>
+   </property>
+  </action>
+ </widget>
+</ui>
