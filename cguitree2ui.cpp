@@ -1352,8 +1352,8 @@ int CGuiTree2Ui::convertTMainMenu(CUiDomElement &aNextUiDomElement, CUiDomElemen
     rootElement = aGuiTreeElm.getRootGuiObject();
     formGeometry = rootElement.getPropertyGeometry();
 
-    rc = aNextUiDomElement.setUiPropertyGeometry(aGuiTreeElm.getDomProperty( "Left", "0"),
-                                                 aGuiTreeElm.getDomProperty( "Top", "0"),
+
+    rc = aNextUiDomElement.setUiPropertyGeometry("0","0",
                                                  QString::number(formGeometry.width()),
                                                  aGuiTreeElm.getDomProperty( "Height", "21"));
     if(rc != 0)
@@ -1379,6 +1379,56 @@ int CGuiTree2Ui::convertTMainMenu(CUiDomElement &aNextUiDomElement, CUiDomElemen
     return(0);
 }
 
+/**
+ * Convert specified widget
+ *
+ * @param[out] aNextUiDomElement Element which should be use for next convertion.
+ * @param[in] aUiElm UI element
+ * @param[in] aGuiTreeElm GuiTree element
+ * @param[in] aGuiTreeValueName This is the name of Object.
+ * @return 0 on success.
+ */
+int CGuiTree2Ui::convertTToolBar(CUiDomElement &aNextUiDomElement, CUiDomElement &aUiElm, CGuiTreeDomElement &aGuiTreeElm, const QString &aGuiTreeValueName)
+{
+    int rc;
+    QRect formGeometry;
+    CGuiTreeDomElement rootElement;
+
+    aNextUiDomElement = aUiElm.createUiWidget("QToolBar", aGuiTreeValueName);
+    if(aNextUiDomElement.isNull())
+    {
+        logging("Error: Failed to create ui widget.");
+        return(-1);
+    }
+
+    rc = aNextUiDomElement.setUiPropertyGeometry("0","22",
+                                                 QString::number(formGeometry.width()),
+                                                 aGuiTreeElm.getDomProperty( "Height", "21"));
+    rootElement = aGuiTreeElm.getRootGuiObject();
+    formGeometry = rootElement.getPropertyGeometry();
+
+    if(rc != 0)
+    {
+        logging("Error: Failed to create property 'Geometry'.");
+        return(-1);
+    }
+
+    rc = aNextUiDomElement.setUiPropertyEnabled(aGuiTreeElm.getDomProperty( "Enabled", "true"));
+    if(rc != 0)
+    {
+        logging("Error: Failed to setup property 'enabled'.");
+        return(-1);
+    }
+
+    rc = aNextUiDomElement.setUiPropertyToolTip(aGuiTreeElm.translateToNonQuotedUnicode(aGuiTreeElm.getDomProperty("Hint")));
+    if(rc != 0)
+    {
+        logging("Error: Failed to create property 'toolTip'.");
+        return(-1);
+    }
+
+    return(0);
+}
 
 /**
  * Convert specified widget
@@ -1411,7 +1461,10 @@ int CGuiTree2Ui::convertTMenuItem(CUiDomElement &aNextUiDomElement, CUiDomElemen
         }
 
         // add element to parent node
-        rc = aUiElm.addUiAddAction(aGuiTreeValueName);
+        if(aGuiTreeElm.getDomProperty("Action","") == "")
+            rc = aUiElm.addUiAddAction(aGuiTreeValueName);
+        else
+            rc = aUiElm.addUiAddAction(aGuiTreeElm.getDomProperty("Action"));
         if(rc != 0)
         {
             logging("Error: Failed to add an 'addaction' entry.");
@@ -1452,14 +1505,18 @@ int CGuiTree2Ui::convertTMenuItem(CUiDomElement &aNextUiDomElement, CUiDomElemen
     }
     else
     {
-        rc = aUiElm.addUiAddAction(aGuiTreeValueName);
+        if(aGuiTreeElm.getDomProperty("Action","") == "")
+            rc = aUiElm.addUiAddAction(aGuiTreeValueName);
+        else
+            rc = aUiElm.addUiAddAction(aGuiTreeElm.getDomProperty("Action"));
         if(rc != 0)
         {
             logging("Error: Failed to add an 'addaction' entry.");
             return(-1);
         }
 
-        rc = aUiElm.addUiGlobalAction(aGuiTreeValueName, aGuiTreeElm.translateToNonQuotedUnicode(aGuiTreeElm.getDomProperty("Caption")));
+        if(aGuiTreeElm.getDomProperty("Action","") == "")
+            rc = aUiElm.addUiGlobalAction(aGuiTreeValueName, aGuiTreeElm.translateToNonQuotedUnicode(aGuiTreeElm.getDomProperty("Caption")));
         if(rc != 0)
         {
             logging("Error: Failed to add an global 'action' entry.");
@@ -1470,6 +1527,20 @@ int CGuiTree2Ui::convertTMenuItem(CUiDomElement &aNextUiDomElement, CUiDomElemen
     return(0);
 }
 
+
+/**
+ * Convert specified widget
+ *
+ * @param[out] aNextUiDomElement Element which should be use for next convertion.
+ * @param[in] aUiElm UI element
+ * @param[in] aGuiTreeElm GuiTree element
+ * @param[in] aGuiTreeValueName This is the name of Object.
+ * @return 0 on success.
+ */
+int CGuiTree2Ui::convertTActionList(CUiDomElement &aNextUiDomElement, CUiDomElement &aUiElm, CGuiTreeDomElement &aGuiTreeElm, const QString &aGuiTreeValueName)
+{
+
+}
 
 /**
  * Convert specified widget
@@ -2266,7 +2337,7 @@ int CGuiTree2Ui::convertTDBGrid(CUiDomElement &aNextUiDomElement, CUiDomElement 
         return(-1);
     }
 
-//    items = aGuiTreeElm.getItemListOf("Columns");
+    items = aGuiTreeElm.getItemListOf("Columns");
 //    rc = aNextUiDomElement.addUiItemList(items);
 //    if(rc != 0)
 //    {
@@ -2440,6 +2511,12 @@ int CGuiTree2Ui::convertGuiObject(CUiDomElement &aUiElm, CGuiTreeDomElement &aGu
         if(rc != 0)
             return(-1);
     }
+    else if(guiTreeValueClass == "TSpinEdit")
+    {
+        rc = this->convertTCSpinEdit(aNextUiDomElement, aUiElm, aGuiTreeElm, guiTreeValueName);
+        if(rc != 0)
+            return(-1);
+    }
     else if(guiTreeValueClass == "TOvcDateEdit")
     {
         rc = this->convertTOvcDateEdit(aNextUiDomElement, aUiElm, aGuiTreeElm, guiTreeValueName);
@@ -2465,17 +2542,21 @@ int CGuiTree2Ui::convertGuiObject(CUiDomElement &aUiElm, CGuiTreeDomElement &aGu
         if(rc != 0)
             return(-1);
     }
-    else if(guiTreeValueClass == "TMainMenu" ||
-            guiTreeValueClass == "TToolBar")
+    else if(guiTreeValueClass == "TMainMenu")
     {
         rc = this->convertTMainMenu(aNextUiDomElement, aUiElm, aGuiTreeElm, guiTreeValueName);
         if(rc != 0)
             return(-1);
     }
-    else if(guiTreeValueClass == "TMenuItem" ||
-            guiTreeValueClass == "TToolButton")
+    else if(guiTreeValueClass == "TMenuItem")
     {
         rc = this->convertTMenuItem(aNextUiDomElement, aUiElm, aGuiTreeElm, guiTreeValueName);
+        if(rc != 0)
+            return(-1);
+    }
+    else if(guiTreeValueClass == "TToolBar")
+    {
+        rc = this->convertTToolBar(aNextUiDomElement, aUiElm, aGuiTreeElm, guiTreeValueName);
         if(rc != 0)
             return(-1);
     }

@@ -51,6 +51,7 @@ private slots:
     void on_listToConvert_itemSelectionChanged();
     void on_btnRemoveFile_clicked();
     void on_btnAddFile_clicked();
+    void on_actionRemember_Last_Directory_triggered();
 };
 
 #endif // CFRONTEND2_H
