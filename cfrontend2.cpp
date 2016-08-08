@@ -441,3 +441,8 @@ void CFrontend2::togleRememberLastDfms()
 
 
 
+
+void CFrontend2::on_actionRemember_Last_Directory_triggered()
+{
+
+}

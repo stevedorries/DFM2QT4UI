@@ -50,6 +50,7 @@ public:
     int addUiItemList(const QStringList &aListItems);
     int addUiAddAction(const QString &aName);
     int addUiGlobalAction(const QString &aName, const QString &aText);
+    int addUiGlobalAction(const QString &aName, const QString &aText, const QString &aToolTip);
 
     /** @todo add xml element for "resources" and "connections" */
 };

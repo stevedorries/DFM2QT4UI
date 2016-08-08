@@ -1288,6 +1288,11 @@ int CUiDomElement::addUiAddAction(const QString &aName)
  **/
 int CUiDomElement::addUiGlobalAction(const QString &aName, const QString &aText)
 {
+    return addUiGlobalAction(aName, aText, "");
+}
+
+int CUiDomElement::addUiGlobalAction(const QString &aName, const QString &aText, const QString &aToolTip)
+{
     CUiDomElement rootWidget;
     CUiDomElement n;
     QDomDocument domDoc;
@@ -1313,6 +1318,16 @@ int CUiDomElement::addUiGlobalAction(const QString &aName, const QString &aText)
     {
         n.clear();
         return(-1);
+    }
+    if(!aToolTip.isNull())
+    {
+        rc = n.setUiPropertyToolTip(aToolTip);
+
+        if(rc != 0)
+        {
+            n.clear();
+            return(-1);
+        }
     }
 
     // append DOM element to uiElm

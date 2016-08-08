@@ -61,8 +61,12 @@ signals:
     int convertTStatusBar(CUiDomElement &aNextUiDomElement, CUiDomElement &aUiElm, CGuiTreeDomElement &aGuiTreeElm, const QString &aGuiTreeValueName);
     int convertTScrollBox(CUiDomElement &aNextUiDomElement, CUiDomElement &aUiElm, CGuiTreeDomElement &aGuiTreeElm, const QString &aGuiTreeValueName);
     int convertTCSpinEdit(CUiDomElement &aNextUiDomElement, CUiDomElement &aUiElm, CGuiTreeDomElement &aGuiTreeElm, const QString &aGuiTreeValueName);
+    int convertTActionList(CUiDomElement &aNextUiDomElement, CUiDomElement &aUiElm, CGuiTreeDomElement &aGuiTreeElm, const QString &aGuiTreeValueName);
+    int convertTAction(CUiDomElement &aNextUiDomElement, CUiDomElement &aUiElm, CGuiTreeDomElement &aGuiTreeElm, const QString &aGuiTreeValueName);
     int convertTMainMenu(CUiDomElement &aNextUiDomElement, CUiDomElement &aUiElm, CGuiTreeDomElement &aGuiTreeElm, const QString &aGuiTreeValueName);
+    int convertTToolBar(CUiDomElement &aNextUiDomElement, CUiDomElement &aUiElm, CGuiTreeDomElement &aGuiTreeElm, const QString &aGuiTreeValueName);
     int convertTMenuItem(CUiDomElement &aNextUiDomElement, CUiDomElement &aUiElm, CGuiTreeDomElement &aGuiTreeElm, const QString &aGuiTreeValueName);
+    int convertTToolBarItem(CUiDomElement &aNextUiDomElement, CUiDomElement &aUiElm, CGuiTreeDomElement &aGuiTreeElm, const QString &aGuiTreeValueName);
     int convertTProgressBar(CUiDomElement &aNextUiDomElement, CUiDomElement &aUiElm, CGuiTreeDomElement &aGuiTreeElm, const QString &aGuiTreeValueName);
     int convertTCGauge(CUiDomElement &aNextUiDomElement, CUiDomElement &aUiElm, CGuiTreeDomElement &aGuiTreeElm, const QString &aGuiTreeValueName);
     int convertTCSpinBox(CUiDomElement &aNextUiDomElement, CUiDomElement &aUiElm, CGuiTreeDomElement &aGuiTreeElm, const QString &aGuiTreeValueName);
