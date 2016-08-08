@@ -1347,7 +1347,6 @@ int CGuiTree2Ui::convertTToolBar(CUiDomElement &aNextUiDomElement, CUiDomElement
         return(-1);
     }
 
-
     rootElement = aGuiTreeElm.getRootGuiObject();
     formGeometry = rootElement.getPropertyGeometry();
 
