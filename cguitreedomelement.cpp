@@ -268,7 +268,6 @@ QStringList CGuiTreeDomElement::getItemListOf(const QString &name)
             item = item.nextSiblingElement();
             continue;
         }
-
         // add to text
         childText = child.toText();
         list.append(childText.data());;
@@ -280,6 +279,45 @@ QStringList CGuiTreeDomElement::getItemListOf(const QString &name)
     return(list);
 }
 
+/**
+ * Read out given attribute of item into a QStringList.
+ *
+ * @param aName Value of guiObject property to search for.
+ * @return Position as Integer or 0.
+ **
+QStringList CGuiTreeDomElement::getItemListOf(const QString &name, const QString &attribute)
+{
+    QStringList list;
+    QDomElement e;
+    QDomElement item;
+    QDomNode child;
+    QDomText childText;
+
+    e = this->firstChildElement(name);
+    if(e.isNull())
+        return(list);
+
+    item = e.firstChildElement("item");
+    while(!item.isNull())
+    {
+        child = item.firstChild();
+        // Look for value which have to be the one and only child node.
+        if(!child.isText())
+        {
+            item = item.nextSiblingElement();
+            continue;
+        }
+        // add to text
+        childText = child.toText();
+        list.append(childText.data());;
+
+        // increace
+        item = item.nextSiblingElement();
+    }
+
+    return(list);
+}
+*/
 
 /**
  * Read out item into a QString separated by \n.

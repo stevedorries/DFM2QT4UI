@@ -3,7 +3,7 @@
 #include <QDebug>
 #include <QFileDialog>
 
-#include "cdfm2guitree.h"
+#include "cdfmparser.h"
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QSettings>
@@ -34,6 +34,10 @@ CFrontend2::CFrontend2(QWidget *parent) :
 
     // create qdesigner workbench as preview
     mFormPreview = new FormPreview();
+    parser = new CDfmParser();
+    //connect(parser, SIGNAL(logging(const QString &)), this, SLOT(logText(const QString &)));
+    connect(ui->actionInclude_Binary_Data, SIGNAL(toggled(bool)),parser, SLOT(setConvertBinaryData(bool)));
+    connect(parser, SIGNAL(logging(const QString &)), this, SLOT(logText(const QString &)));
 
     loadStettings();
 }
@@ -150,8 +154,8 @@ void CFrontend2::convert()
     CUiDomDocument *qtDoc = new CUiDomDocument();
 
     // setup parser
-    CDfm2GuiTree *parser = new CDfm2GuiTree();
-    connect(parser, SIGNAL(logging(const QString &)), this, SLOT(logText(const QString &)));
+    //CDfmParser *parser = new CDfmParser();
+    //connect(parser, SIGNAL(logging(const QString &)), this, SLOT(logText(const QString &)));
 
     // Alloc converter
     CGuiTree2Ui *converter = new CGuiTree2Ui();
@@ -208,6 +212,66 @@ void CFrontend2::convert()
     on_listToConvert_itemSelectionChanged();
 }
 
+void CFrontend2::parseFiles()
+{
+    int rc;
+    CGuiTreeDomDocument *guiTree;
+    QString dfmFilePath, uiFilePath, xmlFilePath;
+    QStringList pathList;
+
+    /*  Init.  */
+
+    // clear log output
+    mLogModel->clear();
+
+    // get list of DFM files
+    pathList = this->getListToConvert();
+
+    // Alloc mem for GUI tree with standardlized widgets
+    guiTree = new CGuiTreeDomDocument();
+
+    // Alloc mem for QT UI tree
+    //CUiDomDocument *qtDoc = new CUiDomDocument();
+
+    // setup parser
+
+
+
+    for(int i = 0; i < pathList.count(); i++)
+    {
+        dfmFilePath = pathList[i];
+        uiFilePath = pathList[i];
+        uiFilePath.remove(QRegExp("\.dfm$"));
+        uiFilePath.append(".ui");
+        xmlFilePath = pathList[i];
+        xmlFilePath.remove(QRegExp("\.dfm$"));
+        xmlFilePath.append(".xml");
+
+        //qtDoc->clear();
+        guiTree->clear();
+
+        logText("--- " + dfmFilePath + " ---");
+
+        // parse file
+        rc = parser->parseFile(guiTree, dfmFilePath.toLatin1().constData());
+        if(rc != 0)
+        {
+            logText("Failed to parse DFM file.");
+            continue;
+        }
+        logText("Parsed DFM file successfully");
+        // write out
+        logText("Write " + xmlFilePath);
+        dumpDomDoc(guiTree, xmlFilePath.toLocal8Bit());
+    }
+
+    // free mem
+    delete(parser);
+    //delete(qtDoc);
+
+    // refresh view
+    on_listToConvert_itemSelectionChanged();
+}
 
 /**
  * @brief Write out xml tree of an domDoc object.

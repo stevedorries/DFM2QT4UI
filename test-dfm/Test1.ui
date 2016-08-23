@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>Form1</class>
- <widget class="QWidget" name="Form1">
+ <widget class="QMainWindow" name="Form1">
   <property name="geometry">
    <rect>
     <x>516</x>
@@ -392,22 +392,22 @@
      <property name="tabPosition">
       <enum>QTabWidget::West</enum>
      </property>
-     <widget class="QWidget" name="tab_CFRVX00000">
+     <widget class="QWidget" name="tab_JAHYU00000">
       <attribute name="title">
        <string>Tab 1</string>
       </attribute>
      </widget>
-     <widget class="QWidget" name="tab_XNTFX00001">
+     <widget class="QWidget" name="tab_PARVT00001">
       <attribute name="title">
        <string>Tab 2</string>
       </attribute>
      </widget>
-     <widget class="QWidget" name="tab_SMGZC00002">
+     <widget class="QWidget" name="tab_QCKDO00002">
       <attribute name="title">
        <string>Tab 3</string>
       </attribute>
      </widget>
-     <widget class="QWidget" name="tab_YUZXA00003">
+     <widget class="QWidget" name="tab_CNDFN00003">
       <attribute name="title">
        <string>...</string>
       </attribute>
@@ -466,22 +466,22 @@
      <property name="tabPosition">
       <enum>QTabWidget::South</enum>
      </property>
-     <widget class="QWidget" name="tab_JPYJU00004">
+     <widget class="QWidget" name="tab_UBMUF00004">
       <attribute name="title">
        <string>Tab 1</string>
       </attribute>
      </widget>
-     <widget class="QWidget" name="tab_QKJSI00005">
+     <widget class="QWidget" name="tab_SMVHH00005">
       <attribute name="title">
        <string>Tab 2</string>
       </attribute>
      </widget>
-     <widget class="QWidget" name="tab_UUPNR00006">
+     <widget class="QWidget" name="tab_HSHQQ00006">
       <attribute name="title">
        <string>Tab 3</string>
       </attribute>
      </widget>
-     <widget class="QWidget" name="tab_OKGJP00007">
+     <widget class="QWidget" name="tab_CGTVD00007">
       <attribute name="title">
        <string>...</string>
       </attribute>
@@ -540,22 +540,22 @@
      <property name="tabPosition">
       <enum>QTabWidget::East</enum>
      </property>
-     <widget class="QWidget" name="tab_DBBMA00008">
+     <widget class="QWidget" name="tab_MNHYQ00008">
       <attribute name="title">
        <string>Tab 1</string>
       </attribute>
      </widget>
-     <widget class="QWidget" name="tab_GMWFJ00009">
+     <widget class="QWidget" name="tab_XADAH00009">
       <attribute name="title">
        <string>Tab 2</string>
       </attribute>
      </widget>
-     <widget class="QWidget" name="tab_WRAWA00010">
+     <widget class="QWidget" name="tab_SUJGP00010">
       <attribute name="title">
        <string>Tab 3</string>
       </attribute>
      </widget>
-     <widget class="QWidget" name="tab_UMNFG00011">
+     <widget class="QWidget" name="tab_OYBLH00011">
       <attribute name="title">
        <string>...</string>
       </attribute>
@@ -614,22 +614,22 @@
      <property name="tabPosition">
       <enum>QTabWidget::South</enum>
      </property>
-     <widget class="QWidget" name="tab_XZAOO00012">
+     <widget class="QWidget" name="tab_KTATJ00012">
       <attribute name="title">
        <string>Tab 1</string>
       </attribute>
      </widget>
-     <widget class="QWidget" name="tab_RCYYN00013">
+     <widget class="QWidget" name="tab_SVRNS00013">
       <attribute name="title">
        <string>Tab 2</string>
       </attribute>
      </widget>
-     <widget class="QWidget" name="tab_ODORR00014">
+     <widget class="QWidget" name="tab_UZHDY00014">
       <attribute name="title">
        <string>Tab 3</string>
       </attribute>
      </widget>
-     <widget class="QWidget" name="tab_QZDOH00015">
+     <widget class="QWidget" name="tab_XAACB00015">
       <attribute name="title">
        <string>...</string>
       </attribute>
@@ -1513,7 +1513,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>TCSpinButtons wird nicht unterstützt</string>
+      <string>TCSpinButtons wird nicht unterst�tzt</string>
      </property>
      <property name="enabled">
       <bool>true</bool>
@@ -1601,6 +1601,34 @@
         </colorrole>
        </disabled>
       </palette>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="CSpinButton1">
+     <property name="geometry">
+      <rect>
+       <x>680</x>
+       <y>40</y>
+       <width>17</width>
+       <height>49</height>
+      </rect>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="minimum">
+      <number>-9999</number>
+     </property>
+     <property name="maximum">
+      <number>9999</number>
+     </property>
+     <property name="singleStep">
+      <number>1</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
      </property>
     </widget>
     <widget class="QScrollBar" name="ScrollBar1">
@@ -2538,9 +2566,9 @@
       <enum>QFrame::Sunken</enum>
      </property>
      <property name="plainText">
-      <string>Schönen guten Morgen,
+      <string>Sch�nen guten Morgen,
 
-es kann ein kleines Männchen nicht 
+es kann ein kleines M�nnchen nicht 
 immer
 im Walde stehen, um es dort zu 
 besehen.
@@ -2993,7 +3021,44 @@ doch auch einmal an zu sehen.</string>
       </property>
      </widget>
     </widget>
-    <widget class="QLabel" name="Panel2">
+    <widget class="QGroupBox" name="RadioGroup1">
+     <property name="title">
+      <string>TRadioGroup</string>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>584</x>
+       <y>56</y>
+       <width>249</width>
+       <height>185</height>
+      </rect>
+     </property>
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="toolTip">
+      <string>Tooltip</string>
+     </property>
+     <property name="layoutDirection">
+      <enum>Vertical</enum>
+     </property>
+     <widget class="QRadioButton" name="Item_1">
+      <property name="text">
+       <string>Item_1</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="Item_2">
+      <property name="text">
+       <string>Item_2</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="Item_3">
+      <property name="text">
+       <string>Item_3</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="Panel2">
      <property name="geometry">
       <rect>
        <x>288</x>
@@ -3152,7 +3217,7 @@ doch auch einmal an zu sehen.</string>
       </property>
      </widget>
     </widget>
-    <widget class="QLabel" name="Panel1">
+    <widget class="QFrame" name="Panel1">
      <property name="geometry">
       <rect>
        <x>475</x>
@@ -3183,7 +3248,7 @@ doch auch einmal an zu sehen.</string>
       <enum>QFrame::Sunken</enum>
      </property>
     </widget>
-    <widget class="QLabel" name="Panel3">
+    <widget class="QFrame" name="Panel3">
      <property name="geometry">
       <rect>
        <x>664</x>
@@ -3214,7 +3279,7 @@ doch auch einmal an zu sehen.</string>
       <enum>QFrame::Raised</enum>
      </property>
     </widget>
-    <widget class="QLabel" name="Panel4">
+    <widget class="QFrame" name="Panel4">
      <property name="geometry">
       <rect>
        <x>288</x>
@@ -3282,7 +3347,7 @@ doch auch einmal an zu sehen.</string>
       <enum>QFrame::Sunken</enum>
      </property>
     </widget>
-    <widget class="QLabel" name="Panel5">
+    <widget class="QFrame" name="Panel5">
      <property name="geometry">
       <rect>
        <x>475</x>
@@ -3310,7 +3375,7 @@ doch auch einmal an zu sehen.</string>
       <enum>QFrame::NoFrame</enum>
      </property>
     </widget>
-    <widget class="QLabel" name="Panel6">
+    <widget class="QFrame" name="Panel6">
      <property name="geometry">
       <rect>
        <x>664</x>
@@ -3341,7 +3406,7 @@ doch auch einmal an zu sehen.</string>
       <enum>QFrame::Raised</enum>
      </property>
     </widget>
-    <widget class="QLabel" name="Panel7">
+    <widget class="QFrame" name="Panel7">
      <property name="geometry">
       <rect>
        <x>288</x>
@@ -3409,7 +3474,7 @@ doch auch einmal an zu sehen.</string>
       <enum>QFrame::Sunken</enum>
      </property>
     </widget>
-    <widget class="QLabel" name="Panel8">
+    <widget class="QFrame" name="Panel8">
      <property name="geometry">
       <rect>
        <x>475</x>
@@ -3440,7 +3505,7 @@ doch auch einmal an zu sehen.</string>
       <enum>QFrame::Raised</enum>
      </property>
     </widget>
-    <widget class="QLabel" name="Panel9">
+    <widget class="QFrame" name="Panel9">
      <property name="geometry">
       <rect>
        <x>664</x>
@@ -3523,23 +3588,23 @@ doch auch einmal an zu sehen.</string>
         <enum>QFrame::Sunken</enum>
        </property>
        <property name="plainText">
-        <string>Hier steht ein längerer Text, der am besten in einem schön 
-großen Fenster betrastet werden sollte.Hier steht ein 
-längerer Text, der am besten in einem schön großen Fenster 
-betrastet werden sollte.Hier steht ein längerer Text, der am 
-besten in einem schön großen Fenster betrastet werden 
-sollte.Hier steht ein längerer Text, der am besten in einem 
-schön großen Fenster betrastet werden sollte.Hier steht ein 
-längerer Text, der am besten in einem schön großen Fenster 
-betrastet werden sollte.Hier steht ein längerer Text, der am 
-besten in einem schön großen Fenster betrastet werden 
-sollte.Hier steht ein längerer Text, der am besten in einem 
-schön großen Fenster betrastet werden sollte.Hier steht ein 
-längerer Text, der am besten in einem schön großen Fenster 
-betrastet werden sollte.Hier steht ein längerer Text, der am 
-besten in einem schön großen Fenster betrastet werden 
-sollte.Hier steht ein längerer Text, der am besten in einem 
-schön großen Fenster betrastet werden sollte.</string>
+        <string>Hier steht ein l�ngerer Text, der am besten in einem sch�n 
+gro�en Fenster betrastet werden sollte.Hier steht ein 
+l�ngerer Text, der am besten in einem sch�n gro�en Fenster 
+betrastet werden sollte.Hier steht ein l�ngerer Text, der am 
+besten in einem sch�n gro�en Fenster betrastet werden 
+sollte.Hier steht ein l�ngerer Text, der am besten in einem 
+sch�n gro�en Fenster betrastet werden sollte.Hier steht ein 
+l�ngerer Text, der am besten in einem sch�n gro�en Fenster 
+betrastet werden sollte.Hier steht ein l�ngerer Text, der am 
+besten in einem sch�n gro�en Fenster betrastet werden 
+sollte.Hier steht ein l�ngerer Text, der am besten in einem 
+sch�n gro�en Fenster betrastet werden sollte.Hier steht ein 
+l�ngerer Text, der am besten in einem sch�n gro�en Fenster 
+betrastet werden sollte.Hier steht ein l�ngerer Text, der am 
+besten in einem sch�n gro�en Fenster betrastet werden 
+sollte.Hier steht ein l�ngerer Text, der am besten in einem 
+sch�n gro�en Fenster betrastet werden sollte.</string>
        </property>
       </widget>
      </widget>
@@ -4042,8 +4107,8 @@ schön großen Fenster betrastet werden sollte.</string>
   <widget class="QMenuBar" name="MainMenu1">
    <property name="geometry">
     <rect>
-     <x>12</x>
-     <y>24</y>
+     <x>0</x>
+     <y>0</y>
      <width>1114</width>
      <height>21</height>
     </rect>
@@ -4146,55 +4211,88 @@ schön großen Fenster betrastet werden sollte.</string>
    <property name="text">
     <string>E1 E1</string>
    </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
   </action>
   <action name="E1E2E11">
    <property name="text">
     <string>E1 E2 E1</string>
+   </property>
+   <property name="toolTip">
+    <string></string>
    </property>
   </action>
   <action name="E1E2E21">
    <property name="text">
     <string>E1 E2 E2</string>
    </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
   </action>
   <action name="E1E2E3E11">
    <property name="text">
     <string>E1 E2 E3 E1</string>
+   </property>
+   <property name="toolTip">
+    <string></string>
    </property>
   </action>
   <action name="E2E11">
    <property name="text">
     <string>E2 E1</string>
    </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
   </action>
   <action name="E2E21">
    <property name="text">
     <string>E2 E2</string>
+   </property>
+   <property name="toolTip">
+    <string></string>
    </property>
   </action>
   <action name="E2E31">
    <property name="text">
     <string>E2 E3</string>
    </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
   </action>
   <action name="E3E11">
    <property name="text">
     <string>E3 E1</string>
+   </property>
+   <property name="toolTip">
+    <string></string>
    </property>
   </action>
   <action name="E3E21">
    <property name="text">
     <string>E3 E2</string>
    </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
   </action>
   <action name="E3E31">
    <property name="text">
     <string>E3 E3</string>
    </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
   </action>
   <action name="E3E41">
    <property name="text">
     <string>E3 E4</string>
+   </property>
+   <property name="toolTip">
+    <string></string>
    </property>
   </action>
   <addaction name="P11"/>
@@ -4202,11 +4300,17 @@ schön großen Fenster betrastet werden sollte.</string>
    <property name="text">
     <string>P1</string>
    </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
   </action>
   <addaction name="P21"/>
   <action name="P21">
    <property name="text">
     <string>P2</string>
+   </property>
+   <property name="toolTip">
+    <string></string>
    </property>
   </action>
   <addaction name="P31"/>
@@ -4214,11 +4318,17 @@ schön großen Fenster betrastet werden sollte.</string>
    <property name="text">
     <string>P3</string>
    </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
   </action>
   <addaction name="P41"/>
   <action name="P41">
    <property name="text">
     <string>P4</string>
+   </property>
+   <property name="toolTip">
+    <string></string>
    </property>
   </action>
   <addaction name="P51"/>
@@ -4226,12 +4336,18 @@ schön großen Fenster betrastet werden sollte.</string>
    <property name="text">
     <string>P5</string>
    </property>
+   <property name="toolTip">
+    <string></string>
+   </property>
   </action>
   <addaction name="separator"/>
   <addaction name="P61"/>
   <action name="P61">
    <property name="text">
     <string>P6</string>
+   </property>
+   <property name="toolTip">
+    <string></string>
    </property>
   </action>
  </widget>

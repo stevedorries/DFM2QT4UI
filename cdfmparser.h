@@ -18,23 +18,22 @@
 using namespace std;
 
 /**
- * DFM to standard GUI tree converter class.
- *
- * This is an QT class to use also the signal-slot methods.
- *
+ * \brief Parser that produces an XML representation of a Delphi text mode DFM file.
  *
  */
-class CDfm2GuiTree : public QObject
+class CDfmParser : public QObject
 {
     Q_OBJECT
 
 public:
-    CDfm2GuiTree();
-    virtual ~CDfm2GuiTree();
+    CDfmParser();
+    virtual ~CDfmParser();
 
+public slots:
     int parseFile(CGuiTreeDomDocument *guiTree, const char *filename);
     int parseFile();
     int setDfmFileName(const char *filename);
+    void setConvertBinaryData(bool value);
 
 signals:
     /**
@@ -53,17 +52,18 @@ private:
 
     /**
      * @enum enumDfmValueInfo Information of value part of an key-value-pair in a DFM file.
-     * @var dviNormal Value contains complue value data-
-     * @var dviBinStart Begin of an binary value, first data are at the next line without a key (example: "Picture.Data = {")
-     * @var dviBinEnd End of an binary value, data are available at this line, too.
-     * @var dviPanelItemsStart Begin of panel items, first item begin in next line.
-     * @var dviPanelItemsEnd End of panel items, data are also in this line.
-     * @var dviStringItemsStart Begin of string items, first item begin in next line.
-     * @var dviStringItemsEnd End of string items, data are also in this line.
-     * @var dviNextLine Value is at the next line.
+     * @var dviNormal Value contains complete value data
+     * @var dviBinStart Begining of a binary value, first data are on the next line without a key (example: "Picture.Data = {")
+     * @var dviBinEnd End of a binary value, data are available on this line, too.
+     * @var dviPanelItemsStart Begining of Panel items, first item begins on the next line.
+     * @var dviPanelItemsEnd End of Panel items, data are also on this line.
+     * @var dviStringItemsStart Begining of String items, first item is on next line.
+     * @var dviStringItemsEnd End of String items, data are also on this line.
+     * @var dviNextLine Value is on the next line.
      */
     enum enumDfmValueInfo{dviNormal=0, dviBinStart, dviBinEnd, dviPanelItemsStart,
                           dviPanelItemsEnd, dviStringItemsStart, dviStringItemsEnd,dviNextLine};
+    bool ConvertBinaryData;
 
     bool isDfmObjectLine(const string str);
     bool isDfmObjectEndLine(const string str);

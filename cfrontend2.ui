@@ -248,11 +248,19 @@
     </property>
     <addaction name="actionAdd_File"/>
     <addaction name="actionRemove_File"/>
+    <addaction name="actionParse_Files"/>
     <addaction name="actionProcess_Queue"/>
     <addaction name="separator"/>
     <addaction name="actionRemember_Last_Directory"/>
    </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <addaction name="actionInclude_Binary_Data"/>
+   </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuOptions"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
@@ -302,7 +310,29 @@
     <string>Process Queue</string>
    </property>
    <property name="toolTip">
-    <string>Convert all of the files</string>
+    <string>Parses and then converts the files</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionParse_Files">
+   <property name="text">
+    <string>Parse Files</string>
+   </property>
+   <property name="toolTip">
+    <string>Parses the files but does not convert them to a UI file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+K</string>
+   </property>
+  </action>
+  <action name="actionInclude_Binary_Data">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Include Binary Data</string>
    </property>
   </action>
  </widget>
@@ -364,22 +394,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>actionAdd_File</sender>
-   <signal>triggered()</signal>
-   <receiver>btnAddFile</receiver>
-   <slot>click()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>-1</x>
-     <y>-1</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>828</x>
-     <y>229</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>actionRemove_File</sender>
    <signal>triggered()</signal>
    <receiver>btnRemoveFile</receiver>
@@ -411,8 +425,41 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>actionAdd_File</sender>
+   <signal>triggered()</signal>
+   <receiver>btnAddFile</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>828</x>
+     <y>229</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionParse_Files</sender>
+   <signal>triggered()</signal>
+   <receiver>CFrontend2</receiver>
+   <slot>parseFiles()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>495</x>
+     <y>281</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>495</x>
+     <y>281</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>togleRememberLastDfms()</slot>
+  <slot>parseFiles()</slot>
  </slots>
 </ui>

@@ -5,6 +5,7 @@
 #include <QStandardItemModel>
 #include <QDomDocument>
 #include "formpreview.h"
+#include "cdfmparser.h"
 
 namespace Ui {
     class CFrontend2;
@@ -25,6 +26,8 @@ public:
     void storeSettings();
     void loadStettings();
 
+    CDfmParser *parser;
+
 
 private:
     Ui::CFrontend2 *ui;
@@ -34,14 +37,15 @@ private:
     QString mLastDfmDirPath;
     bool mRememberLastDfms;
 
-    void dumpDomDoc(QDomDocument *domDoc, const char * fileName);
+    void dumpDomDoc(QDomDocument *domDoc, const char *fileName);
     QStringList getListToConvert();
     void enablePreview(QString &filePath);
     void showPreview(QString fileName);
 
 
 public slots:
-    void logText(const QString & text);
+    void logText(const QString &text);
+    void parseFiles();
     void togleRememberLastDfms();
 
 private slots:

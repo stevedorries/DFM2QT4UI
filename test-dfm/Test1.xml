@@ -702,7 +702,7 @@
      <Top>48</Top>
      <Width>171</Width>
      <Height>13</Height>
-     <Caption>'TCSpinButtons wird nicht unterstützt'</Caption>
+     <Caption>'TCSpinButtons wird nicht unterst�tzt'</Caption>
     </guiObject>
     <guiObject>
      <name>Button1</name>
@@ -1133,9 +1133,9 @@
      <Height>89</Height>
      <Hint>'Tooltip'</Hint>
      <Lines.Strings>
-      <item>Schönen guten Morgen,</item>
+      <item>Sch�nen guten Morgen,</item>
       <item></item>
-      <item>es kann ein kleines Männchen nicht </item>
+      <item>es kann ein kleines M�nnchen nicht </item>
       <item>immer</item>
       <item>im Walde stehen, um es dort zu </item>
       <item>besehen.</item>
@@ -1563,23 +1563,23 @@
       <Height>209</Height>
       <Hint>'Tooltip'</Hint>
       <Lines.Strings>
-       <item>Hier steht ein längerer Text, der am besten in einem schön </item>
-       <item>großen Fenster betrastet werden sollte.Hier steht ein </item>
-       <item>längerer Text, der am besten in einem schön großen Fenster </item>
-       <item>betrastet werden sollte.Hier steht ein längerer Text, der am </item>
-       <item>besten in einem schön großen Fenster betrastet werden </item>
-       <item>sollte.Hier steht ein längerer Text, der am besten in einem </item>
-       <item>schön großen Fenster betrastet werden sollte.Hier steht ein </item>
-       <item>längerer Text, der am besten in einem schön großen Fenster </item>
-       <item>betrastet werden sollte.Hier steht ein längerer Text, der am </item>
-       <item>besten in einem schön großen Fenster betrastet werden </item>
-       <item>sollte.Hier steht ein längerer Text, der am besten in einem </item>
-       <item>schön großen Fenster betrastet werden sollte.Hier steht ein </item>
-       <item>längerer Text, der am besten in einem schön großen Fenster </item>
-       <item>betrastet werden sollte.Hier steht ein längerer Text, der am </item>
-       <item>besten in einem schön großen Fenster betrastet werden </item>
-       <item>sollte.Hier steht ein längerer Text, der am besten in einem </item>
-       <item>schön großen Fenster betrastet werden sollte.</item>
+       <item>Hier steht ein l�ngerer Text, der am besten in einem sch�n </item>
+       <item>gro�en Fenster betrastet werden sollte.Hier steht ein </item>
+       <item>l�ngerer Text, der am besten in einem sch�n gro�en Fenster </item>
+       <item>betrastet werden sollte.Hier steht ein l�ngerer Text, der am </item>
+       <item>besten in einem sch�n gro�en Fenster betrastet werden </item>
+       <item>sollte.Hier steht ein l�ngerer Text, der am besten in einem </item>
+       <item>sch�n gro�en Fenster betrastet werden sollte.Hier steht ein </item>
+       <item>l�ngerer Text, der am besten in einem sch�n gro�en Fenster </item>
+       <item>betrastet werden sollte.Hier steht ein l�ngerer Text, der am </item>
+       <item>besten in einem sch�n gro�en Fenster betrastet werden </item>
+       <item>sollte.Hier steht ein l�ngerer Text, der am besten in einem </item>
+       <item>sch�n gro�en Fenster betrastet werden sollte.Hier steht ein </item>
+       <item>l�ngerer Text, der am besten in einem sch�n gro�en Fenster </item>
+       <item>betrastet werden sollte.Hier steht ein l�ngerer Text, der am </item>
+       <item>besten in einem sch�n gro�en Fenster betrastet werden </item>
+       <item>sollte.Hier steht ein l�ngerer Text, der am besten in einem </item>
+       <item>sch�n gro�en Fenster betrastet werden sollte.</item>
       </Lines.Strings>
       <TabOrder>0</TabOrder>
      </guiObject>

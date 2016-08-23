@@ -108,14 +108,16 @@ int CGuiTree2Ui::convertForm(CUiDomElement &aNextUiDomElement, CUiDomElement &aU
     aNextUiDomElement = aUiElm;
     aNextUiDomElement.setUiDomKeyValuePair("class", aGuiTreeValueName);
 
-    aNextUiDomElement = aUiElm.createUiWidget("QWidget", aGuiTreeValueName);
+    aNextUiDomElement = aUiElm.createUiWidget("QMainWindow", aGuiTreeValueName);
     if(aNextUiDomElement.isNull())
     {
         logging("Error: Failed to create ui widget.");
         return(-1);
     }
 
-    rc = aNextUiDomElement.setUiPropertyGeometry(aGuiTreeElm.getPropertyGeometry());
+    rc = aNextUiDomElement.setUiPropertyGeometry("0","0",
+                                                 aGuiTreeElm.getDomProperty("Width","200"),
+                                                 aGuiTreeElm.getDomProperty("Height","200"));
     if(rc != 0)
     {
         logging("Error: Failed to create property 'Geometry'.");
@@ -135,6 +137,33 @@ int CGuiTree2Ui::convertForm(CUiDomElement &aNextUiDomElement, CUiDomElement &aU
         logging("Error: Failed to setup property 'text'.");
         return(-1);
     }
+
+        CUiDomElement tmpElm;
+
+        // create element node
+        tmpElm = aUiElm.ownerDocument().createElement("widget");
+        if(tmpElm.isNull())
+            return(-1);
+
+        // create attributes
+        tmpElm.setAttribute("class", "QFrame");
+        tmpElm.setAttribute("name", "centralWidget");
+        //add geometry
+        tmpElm.setUiPropertyGeometry("0","0",
+                                  aGuiTreeElm.getDomProperty("Width","200"),
+                                  aGuiTreeElm.getDomProperty("Height","200"));
+
+        // append DOM element to uiElm
+        aUiElm.appendChild(tmpElm);
+
+
+    aNextUiDomElement = tmpElm;//aUiElm..createUiWidget("QFrame","centralWidget");
+    if(aNextUiDomElement.isNull())
+    {
+        logging("Error: Failed to create central widget.");
+        return(-1);
+    }
+
 
     return(0);
 }
@@ -1336,7 +1365,7 @@ int CGuiTree2Ui::convertTCSpinEdit(CUiDomElement &aNextUiDomElement, CUiDomEleme
  */
 int CGuiTree2Ui::convertTToolBar(CUiDomElement &aNextUiDomElement, CUiDomElement &aUiElm, CGuiTreeDomElement &aGuiTreeElm, const QString &aGuiTreeValueName)
 {
-    int rc;
+    int rc = 0;
     QRect formGeometry;
     CGuiTreeDomElement rootElement;
 
@@ -1350,10 +1379,10 @@ int CGuiTree2Ui::convertTToolBar(CUiDomElement &aNextUiDomElement, CUiDomElement
     rootElement = aGuiTreeElm.getRootGuiObject();
     formGeometry = rootElement.getPropertyGeometry();
 
-    rc = aNextUiDomElement.setUiPropertyGeometry(aGuiTreeElm.getDomProperty( "Left", "0"),
-                                                 "22",
-                                                 QString::number(formGeometry.width()),
-                                                 aGuiTreeElm.getDomProperty( "Height", "21"));
+//    rc = aNextUiDomElement.setUiPropertyGeometry(aGuiTreeElm.getDomProperty( "Left", "0"),
+//                                                 "22",
+//                                                 QString::number(formGeometry.width()),
+//                                                 aGuiTreeElm.getDomProperty( "Height", "21"));
     if(rc != 0)
     {
         logging("Error: Failed to create property 'Geometry'.");
@@ -2459,7 +2488,6 @@ int CGuiTree2Ui::convertTDBGrid(CUiDomElement &aNextUiDomElement, CUiDomElement 
         logging("Error: Failed to create property 'Geometry'.");
         return(-1);
     }
-
     rc = aNextUiDomElement.setUiPropertyEnabled(aGuiTreeElm.getDomProperty( "Enabled", "true").toLower());
     if(rc != 0)
     {
@@ -2474,7 +2502,7 @@ int CGuiTree2Ui::convertTDBGrid(CUiDomElement &aNextUiDomElement, CUiDomElement 
         return(-1);
     }
 
-//    items = aGuiTreeElm.getItemListOf("Columns");
+    items = aGuiTreeElm.getItemListOf("Columns");
 //    rc = aNextUiDomElement.addUiItemList(items);
 //    if(rc != 0)
 //    {
@@ -2566,7 +2594,8 @@ int CGuiTree2Ui::convertGuiObject(CUiDomElement &aUiElm, CGuiTreeDomElement &aGu
     }
     else if(guiTreeValueClass == "TButton" ||
             guiTreeValueClass == "TBitBtn" ||
-            guiTreeValueClass == "TSpeedButton")
+            guiTreeValueClass == "TSpeedButton" ||
+            guiTreeValueClass == "TLMDDockSpeedButton")
     {
         rc = this->convertTButton(aNextUiDomElement, aUiElm, aGuiTreeElm, guiTreeValueName);
         if(rc != 0)
@@ -2588,7 +2617,8 @@ int CGuiTree2Ui::convertGuiObject(CUiDomElement &aUiElm, CGuiTreeDomElement &aGu
     }
     else if(guiTreeValueClass == "TEdit" ||
             guiTreeValueClass == "TOvcNumericField" ||
-            guiTreeValueClass == "TOvcEdit")
+            guiTreeValueClass == "TOvcEdit" ||
+            guiTreeValueClass == "TOvcSimpleField")
     {
         rc = this->convertTEdit(aNextUiDomElement, aUiElm, aGuiTreeElm, guiTreeValueName);
         if(rc != 0)
@@ -2624,7 +2654,8 @@ int CGuiTree2Ui::convertGuiObject(CUiDomElement &aUiElm, CGuiTreeDomElement &aGu
         if(rc != 0)
             return(-1);
     }
-    else if(guiTreeValueClass == "TStatusBar")
+    else if(guiTreeValueClass == "TStatusBar" ||
+            guiTreeValueClass == "TCompStatusBar")
     {
         rc = this->convertTStatusBar(aNextUiDomElement, aUiElm, aGuiTreeElm, guiTreeValueName);
         if(rc != 0)
@@ -2637,6 +2668,7 @@ int CGuiTree2Ui::convertGuiObject(CUiDomElement &aUiElm, CGuiTreeDomElement &aGu
             return(-1);
     }
     else if(guiTreeValueClass == "TCSpinEdit" ||
+            guiTreeValueClass == "TCSpinButton" ||
             guiTreeValueClass == "TSpinEdit")
     {
         rc = this->convertTCSpinEdit(aNextUiDomElement, aUiElm, aGuiTreeElm, guiTreeValueName);
@@ -2771,6 +2803,14 @@ int CGuiTree2Ui::convertGuiObject(CUiDomElement &aUiElm, CGuiTreeDomElement &aGu
         if(rc != 0)
             return(-1);
     }
+    else if(guiTreeValueClass == "TMSQuery" ||
+            guiTreeValueClass == "TMSConnection" ||
+            guiTreeValueClass == "TDataSource" ||
+            guiTreeValueClass == "TImageList" ||
+            guiTreeValueClass == "TApplicationEvents" )
+    {
+
+    }
     else if(guiTreeValueClass == "TActionList")
     {
         //The action list class doesn't have a direct mirror in Qt, the functions it provides
@@ -2840,7 +2880,7 @@ int CGuiTree2Ui::convertGuiObject(CUiDomElement &aUiElm, CGuiTreeDomElement &aGu
 
 
 /**
- * @brief Convert givin guiTree to QT4 UI format.
+ * @brief Convert given guiTree to QT4 UI format.
  *
  * @return 0 = OK
  * @return -1 = Failed

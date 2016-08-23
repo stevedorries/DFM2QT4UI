@@ -13,7 +13,7 @@ CGuiTreeDomDocument::CGuiTreeDomDocument()
 /**
  * Get first "guiObject" located in "guiRoot".
  *
- * @return Node element of first guiObject or and empty element node there is no one.
+ * @return Node element of first guiObject or an empty element node if there is none.
  **/
 CGuiTreeDomElement CGuiTreeDomDocument::getFirstGuiObjectElement()
 {

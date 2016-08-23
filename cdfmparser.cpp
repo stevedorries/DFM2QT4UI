@@ -1,12 +1,12 @@
-/*
- * CDfm2GuiTree.cpp
- *
- *  Created on: 11.08.2009
- *      Author: Robert Doering
+/**
+ * @file CDfmParser.cpp
+ * @authors Robert Doering
+ *          Steven Dorries
+ * @date 11.08.2009
  *
  */
 
-#include "cdfm2guitree.h"
+#include "cdfmparser.h"
 #include <sstream>
 #include <fstream>
 #include <stdio.h>
@@ -14,18 +14,18 @@
 #include <QMessageBox>
 
 
-CDfm2GuiTree::CDfm2GuiTree()
+CDfmParser::CDfmParser()
 {
 }
 
 
-CDfm2GuiTree::~CDfm2GuiTree()
+CDfmParser::~CDfmParser()
 {
 }
 
 
 /**
- * @brief Parse givin file into givin xml document.
+ * @brief Parse given file into given XML document.
  *
  * @param filename Name of DFM file to parse.
  * @param guiTree CGuiTreeDomDocument to fill with widget from the file.
@@ -33,9 +33,9 @@ CDfm2GuiTree::~CDfm2GuiTree()
  * @return 0 = ok
  * @return -1 = error
  */
-int CDfm2GuiTree::parseFile(CGuiTreeDomDocument *guiTree, const char *filename)
+int CDfmParser::parseFile(CGuiTreeDomDocument *guiTree, const char *filename)
 {
-    // Set domDoc to givin guiTree
+    // Set domDoc to given guiTree
     domDoc = guiTree;
 
     // Set filename.
@@ -53,7 +53,7 @@ int CDfm2GuiTree::parseFile(CGuiTreeDomDocument *guiTree, const char *filename)
  * @return 0 = ok
  * @return -1 = error
  */
-int CDfm2GuiTree::parseFile()
+int CDfmParser::parseFile()
 {
     string str;
     string substr;
@@ -71,7 +71,7 @@ int CDfm2GuiTree::parseFile()
     int parserReturnCode = 0;
     int rc;  // tmp return code
 
-    // Repare xml document
+    // Repare XML document
     rootDomElm = domDoc->createElement("guiRoot");
     domDoc->appendChild(rootDomElm);
     curDomElm = rootDomElm;
@@ -94,6 +94,8 @@ int CDfm2GuiTree::parseFile()
             tmpDomElm = domDoc->createElement("guiObject");
             curDomElm.appendChild(tmpDomElm);
             curDomElm = tmpDomElm;  // set new node as current node
+            curDomElm.setAttribute("name",QString(getDfmObjectName(str).c_str()));
+            curDomElm.setAttribute("class", QString(getDfmObjectType(str).c_str()));
 
             curDomElm.setDomProperty("name", getDfmObjectName(str).c_str());
             curDomElm.setDomProperty("class", getDfmObjectType(str).c_str());
@@ -122,8 +124,8 @@ int CDfm2GuiTree::parseFile()
                 break;
             case dviBinStart:
                 rc = parseBinaryValueLines(domDoc, curDomElm, QString(pairKey.data()), QString(pairValue.data()));
-                if(rc != 0)
-                    parserReturnCode = -1;
+                    if(rc != 0)
+                        parserReturnCode = -1;
                 break;
             case dviPanelItemsStart:
                 rc = parsePanelItemsValueLines(domDoc, curDomElm, QString(pairKey.data()), QString(pairValue.data()));
@@ -160,10 +162,10 @@ int CDfm2GuiTree::parseFile()
 
 
 /**
- * Parse Lines for an binary key-value-pair.
+ * @brief Parse Lines for an binary key-value-pair.
  *
- * Key and value will be added to the domDocument as property
- * for givin domElm.
+ * @brief Key and value will be added to the domDocument as property
+ * @brief for given domElm.
  * @example
     Icon.Data = {
     0000010001002020100000000000E80200001600000028000000200000004000
@@ -174,7 +176,7 @@ int CDfm2GuiTree::parseFile()
  * @return 0 ok
  * @return -1 Failed
  */
-int CDfm2GuiTree::parseBinaryValueLines(CGuiTreeDomDocument *domDoc, CGuiTreeDomElement &domElm, QString key, QString value)
+int CDfmParser::parseBinaryValueLines(CGuiTreeDomDocument *domDoc, CGuiTreeDomElement &domElm, QString key, QString value)
 {
     string line;
     enumDfmValueInfo pairValueInfo;
@@ -187,13 +189,14 @@ int CDfm2GuiTree::parseBinaryValueLines(CGuiTreeDomDocument *domDoc, CGuiTreeDom
         switch(pairValueInfo)
         {
         case dviNormal:
-            value += QString(line.data());
+            value.append(QString(line.data())+"\n");
             break;
         case dviBinEnd:
             value += QString(line.data());
             value.replace(QRegExp("[{}]"),"");
             // append key-value-pair to dom object
-            domElm.setDomProperty(key, value);
+            if(ConvertBinaryData)
+                domElm.setDomProperty(key, value);
             return(0);
             break;
         case dviPanelItemsEnd:
@@ -239,7 +242,7 @@ int CDfm2GuiTree::parseBinaryValueLines(CGuiTreeDomDocument *domDoc, CGuiTreeDom
  * @return 0 ok
  * @return -1 Failed
  */
-int CDfm2GuiTree::parsePanelItemsValueLines(CGuiTreeDomDocument *domDoc, CGuiTreeDomElement &domElm, QString key, QString value)
+int CDfmParser::parsePanelItemsValueLines(CGuiTreeDomDocument *domDoc, CGuiTreeDomElement &domElm, QString key, QString value)
 {
     string line;
     enumDfmValueInfo pairValueInfo;
@@ -293,7 +296,7 @@ int CDfm2GuiTree::parsePanelItemsValueLines(CGuiTreeDomDocument *domDoc, CGuiTre
  * @return 0 ok
  * @return -1 Failed
  */
-int CDfm2GuiTree::parseStringItemsValueLines(CGuiTreeDomDocument *domDoc, CGuiTreeDomElement &domElm, QString key, QString value)
+int CDfmParser::parseStringItemsValueLines(CGuiTreeDomDocument *domDoc, CGuiTreeDomElement &domElm, QString key, QString value)
 {
     string line;
     enumDfmValueInfo pairValueInfo;
@@ -338,10 +341,10 @@ int CDfm2GuiTree::parseStringItemsValueLines(CGuiTreeDomDocument *domDoc, CGuiTr
 
 
 /**
- * Parse Lines for long text key-value-pair.
+ * @brief Parse Lines for long text key-value-pair.
  *
- * Key and value will be added to the domDocument as properties
- * for given domElm.
+ * @brief Key and value will be added to the domDocument as properties
+ * @brief for given domElm.
  * @example
     Items.Strings = (
         'electronic Chart')
@@ -349,7 +352,7 @@ int CDfm2GuiTree::parseStringItemsValueLines(CGuiTreeDomDocument *domDoc, CGuiTr
  * @return 0 ok
  * @return -1 Failed
  */
-int CDfm2GuiTree::parseLongTextValueLines(CGuiTreeDomDocument *domDoc, CGuiTreeDomElement &domElm, QString key, QString value)
+int CDfmParser::parseLongTextValueLines(CGuiTreeDomDocument *domDoc, CGuiTreeDomElement &domElm, QString key, QString value)
 {
 
     QString nvalue;
@@ -403,7 +406,7 @@ int CDfm2GuiTree::parseLongTextValueLines(CGuiTreeDomDocument *domDoc, CGuiTreeD
  * @return 0 = ok
  * @return -1 = Failed
  */
-int CDfm2GuiTree::setDfmFileName(const char *filename)
+int CDfmParser::setDfmFileName(const char *filename)
 {
     if(filename == NULL)
         return(-1);
@@ -413,8 +416,19 @@ int CDfm2GuiTree::setDfmFileName(const char *filename)
     return(0);
 }
 
+/**
+ * @brief Set the value of ConvertBinaryData
+ * @param value
+ */
+void CDfmParser::setConvertBinaryData(bool value)
+{
+    if(value == NULL)
+        this->ConvertBinaryData = false;
+    else
+        this->ConvertBinaryData = value;
+}
 
-bool CDfm2GuiTree::isDfmObjectLine(const string str)
+bool CDfmParser::isDfmObjectLine(const string str)
 {
     if(str.find("object", 0) != string::npos &&
             str.find(":", 0) != string::npos)
@@ -422,7 +436,7 @@ bool CDfm2GuiTree::isDfmObjectLine(const string str)
     return(false);
 }
 
-bool CDfm2GuiTree::isDfmObjectEndLine(const string str)
+bool CDfmParser::isDfmObjectEndLine(const string str)
 {
     string s = str;
     trimSpaces(s);
@@ -431,14 +445,14 @@ bool CDfm2GuiTree::isDfmObjectEndLine(const string str)
     return(false);
 }
 
-string CDfm2GuiTree::getDfmObjectName(const string line)
+string CDfmParser::getDfmObjectName(const string line)
 {
     string name = line.substr((line.find_first_of("t", 0)+2), line.length());
     name = name.substr(0, name.find_first_of(":", 0));
     return(name);
 }
 
-string CDfm2GuiTree::getDfmObjectType(const string line)
+string CDfmParser::getDfmObjectType(const string line)
 {
     string type = line.substr((line.find_first_of(":", 0)+2), line.length());
     return(type);
@@ -450,7 +464,7 @@ string CDfm2GuiTree::getDfmObjectType(const string line)
  *
  * sample: Font.Charset = DEFAULT_CHARSET
  */
-bool CDfm2GuiTree::isDfmKeyValuePair(const string line)
+bool CDfmParser::isDfmKeyValuePair(const string line)
 {
     size_t pos;
     bool found;
@@ -494,7 +508,7 @@ bool CDfm2GuiTree::isDfmKeyValuePair(const string line)
  * @param[in] value String with value information.
  * @return enumDfmValueInfo
  */
-CDfm2GuiTree::enumDfmValueInfo CDfm2GuiTree::getDfmValueInfo(const string value)
+CDfmParser::enumDfmValueInfo CDfmParser::getDfmValueInfo(const string value)
 {
     size_t pos;
     const char spaces[] = " \t\r\n";
@@ -539,7 +553,7 @@ CDfm2GuiTree::enumDfmValueInfo CDfm2GuiTree::getDfmValueInfo(const string value)
  *
  * @param[in] line DFM file line like "   Font.Name = 'MS Sans Serif'"
  */
-string CDfm2GuiTree::getDfmPairKey(const string line)
+string CDfmParser::getDfmPairKey(const string line)
 {
     string rs;
     size_t pos;
@@ -562,7 +576,7 @@ string CDfm2GuiTree::getDfmPairKey(const string line)
  *
  * @param[in] line DFM file line like "   Font.Name = 'MS Sans Serif'"
  */
-string CDfm2GuiTree::getDfmPairValue(const string line)
+string CDfmParser::getDfmPairValue(const string line)
 {
     string rs;
     size_t pos;
@@ -585,7 +599,7 @@ string CDfm2GuiTree::getDfmPairValue(const string line)
 /**
  * Remove leading and trailing spaces
  */
-void CDfm2GuiTree::trimSpaces(string& strText)
+void CDfmParser::trimSpaces(string& strText)
 {
     const char spaces[] = " \t\r\n";
 
