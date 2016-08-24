@@ -1,9 +1,8 @@
 /**
  * cguitree2ui.h
  *
- * @class Convert an domDoc object to an QT4 object.
+ * @class Convert a domDoc object to an QT4 object.
  *
- * @TODO: add loggin signal
  *
  *
  *  Created on: 11.08.2009
@@ -14,7 +13,7 @@
 #define CGUITREE2UI_H
 
 #include <QObject>
-#include <QDomDocument>  // QDomDocument
+#include <QDomDocument>
 #include "cuidomdocument.h"
 #include "cuidomelement.h"
 #include "cguitreedomdocument.h"

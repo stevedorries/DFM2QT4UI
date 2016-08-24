@@ -48,7 +48,7 @@ CGuiTreeDomElement CGuiTreeDomElement::getRootGuiObject()
 
 
 /**
- * Read a value from givin gui object node for a givin key This is the secure way to do this.
+ * Read a value from given GUI object node for a given key. This is the secure way to do this.
  *
  * DOM element sample:
  * <guiObject>
@@ -62,7 +62,7 @@ CGuiTreeDomElement CGuiTreeDomElement::getRootGuiObject()
  *  <Shape>bsBottomLine</Shape>
  * </guiObject>
  *
- * @param value Storage for value for givin key.
+ * @param value Storage for value for given key.
  * @param key Name of childnode, which contain the value.
  * @param gutTreeElm Parentnode which is containing the key and value.
  * @return 0 = ok, -1 = Failed
@@ -102,7 +102,7 @@ int CGuiTreeDomElement::getDomPropertySecure(QString &value, const QString &key)
 
 
 /**
- * Read a value from givin gui object node for a givin key.
+ * Read a value from given gui object node for a given key.
  *
  * DOM element sample:
  * <guiObject>
@@ -116,7 +116,7 @@ int CGuiTreeDomElement::getDomPropertySecure(QString &value, const QString &key)
  *  <Shape>bsBottomLine</Shape>
  * </guiObject>
  *
- * @param  domElm Givin GUI widget DOM element.
+ * @param  domElm given GUI widget DOM element.
  * @param  key name property.
  * @return Value as string if exist or "" if isn't.
  **/
@@ -131,7 +131,7 @@ QString CGuiTreeDomElement::getDomProperty(const QString key)
 
 
 /**
- * Read a value from givin gui object node for a givin key.
+ * Read a value from given gui object node for a given key.
  *
  * DOM element sample:
  * <guiObject>
@@ -145,7 +145,7 @@ QString CGuiTreeDomElement::getDomProperty(const QString key)
  *  <Shape>bsBottomLine</Shape>
  * </guiObject>
  *
- * @param  domElm Givin GUI widget DOM element.
+ * @param  domElm given GUI widget DOM element.
  * @param  key name property.
  * @param  defaultValue Value, used if key does not exist.
  * @return Value as string if exist or defaultValue if isn't.
@@ -164,9 +164,9 @@ QString CGuiTreeDomElement::getDomProperty(const QString key, const QString defa
 
 
 /**
- * Create an DOM element with text content and add  this to a givin element.
+ * Create an DOM element with text content and add  this to a given element.
  *
- * @param domDoc Givin document object.
+ * @param domDoc given document object.
  * @param key Name of new DOM element.
  * @param value The text content of new DOM element
  * @return 0 on Success else -1.
@@ -192,7 +192,7 @@ int CGuiTreeDomElement::setDomProperty(const QString key, const QString value)
 /**
  * Find position of first child-guiObject with matching name.
  *
- * @param domElm Givin DOM element.
+ * @param domElm given DOM element.
  * @param name Value of guiObject property to search for.
  * @return Position as Integer or 0.
  **/
@@ -460,7 +460,7 @@ int CGuiTreeDomElement::getColor(QColor &aColor, const QString &aName)
 
 
 /**
- * Remove quotes and spaces at begin and end of givin string.
+ * Remove quotes and spaces at begin and end of given string.
  *
  * @param text Text to process.
  * @return text without quotes

@@ -19,7 +19,7 @@
  * TGroupBox     - QGroupBox
  * TCheckBox     - QCheckBox
  * TRadioButton  - QRadioButton
- * TImage        - QGraphicsView // picture will not be stored, maybe it schould be stored to file, but in this case we need also an *.qrc file and a *.pro which is linking both
+ * TImage        - QGraphicsView // picture will not be stored, maybe it should be stored to file, but in this case we need also an *.qrc file and a *.pro which is linking both
  * TStatusBar    - QStatusBar
  * TCSpinEdit    - QSpinBox
  * TLMDSpinEdit  - QSpinBox

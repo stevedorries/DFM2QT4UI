@@ -61,6 +61,7 @@ int CDfmParser::parseFile()
     stringstream sstr;
 
     CGuiTreeDomElement curDomElm;
+    QDomProcessingInstruction  domDocUiHeader;
     QDomElement tmpDomElm;
     QDomText tmpDomTxt;
     QDomElement rootDomElm;
@@ -73,6 +74,11 @@ int CDfmParser::parseFile()
 
     // Repare XML document
     rootDomElm = domDoc->createElement("guiRoot");
+    // Mark file as xml file
+    domDocUiHeader = domDoc->createProcessingInstruction("xml", "version=\"1.0\" encoding=\"UTF-8\"");
+    domDoc->appendChild(domDocUiHeader);
+
+
     domDoc->appendChild(rootDomElm);
     curDomElm = rootDomElm;
 
